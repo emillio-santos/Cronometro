@@ -1,0 +1,107 @@
+// Variaveis
+$orange: #ffa600;
+$grey: #f3f3f3;
+$white: #fff;
+$base-color:$orange;
+
+// .wrap {
+//     //     /*Ajuste a largura e altura desejadas aqui*/
+//     width: 100%;
+//     height: 300px;
+    
+//     //     /*isto fará o elemento video e o .container se adaptarem ao .wrap*/
+//      position: relative;
+//     }
+    
+//     .wrap > .bg-video {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         z-index: -1; /*apenas um -1 é necessário quando se trabalha com relative + absolute, sendo pai e filho*/
+//         width: 100%;
+//         // height: 100%;
+//         overflow: hidden; /* evita do video passar a altura desejada do .wrap */
+//     }
+//     .wrap > .bg-video > video {
+//         width: 100%;
+//     }
+    
+
+// Mixin
+@mixin transition {
+-webkit-transition: all 0.5s ease-in-out; 
+-moz-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+@mixin corners ( $radius ) {
+    -moz-border-radius: radius;
+    -webkit-border-radius: radius;
+    border-radius: radius;
+    -khtml-border-radius: radius;
+}
+ body {
+     background: rgb(4, 78, 175);
+   font-family: "HelveticaNeua", "Helvetica Neua Light", "Helvetica Neua", Helvetica, Arial, "Lucia Grande", sans-serif;
+    height:100%
+ }
+.wrapper {
+    width: 800px;
+    margin: 30px;
+    color: white;
+    text-align: center;
+    
+    
+}
+h2, h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 50;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
+@font-face {
+    font-family: Barrio;
+    src: url(../fonts/DS-DIGIB.ttf)
+}
+h1 {
+    font-family: Barrio;
+    font-weight: 100;
+    font-size: 6.5em;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    
+}
+#sec, #min, #hrs {
+    font-size: 2em;
+}
+
+
+
+button{
+    @include corners (5px);
+    background:rgba(255, 255, 255, 0);
+    color:white;
+    border: solid 1px white;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:1em;
+    padding:7px 7px;
+    width:120px;
+    margin: 10px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-synthesis-weight: 0.5px;
+    font-palette: 0.5px;
+    box-shadow: inset 0px 0px 16px 1px rgba(223, 218, 218, 0.25);
+     outline: none;
+      &:hover{
+        @include transition;
+        background:white;
+        border: solid 1px white;
+        color:rgb(4, 78, 175);;
+        }
+    }
+   
